@@ -6,6 +6,4 @@ export type Pet = {
     sex: 'Masculino' | 'Feminino'
 }
 
-export type PetType = {
-    type: 'dog' | 'cat' | 'fish'
-}
+export type PetType = 'dog' | 'cat' | 'fish'

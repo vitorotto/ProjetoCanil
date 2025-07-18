@@ -20,7 +20,7 @@ const data: Type.Pet[] = [
     { type: 'fish', image: 'acara.jpg', name: 'Acará Bandeira', color: 'Preto', sex: 'Masculino', }
 ];
 
-export const pet = {
+export const Pet = {
     // pegar todos os pets
     getAll: (): Type.Pet[] => {
         return data;

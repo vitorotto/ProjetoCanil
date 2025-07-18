@@ -1,4 +1,4 @@
-import * as Type from '../Types' 
+import * as Type from '../Types'
 
 const data: Type.Pet[] = [
     { type: 'dog', image: 'pastor-alemao.jpg', name: 'Pastor-alemão', color: 'Amarelo e Preto', sex: 'Masculino', },
@@ -18,14 +18,19 @@ const data: Type.Pet[] = [
     { type: 'fish', image: 'limpavidro.jpg', name: 'Limpa Vidro', color: 'Verde e Branco', sex: 'Masculino', },
     { type: 'fish', image: 'tanictis.jpg', name: 'Tanictis', color: 'Vermelho', sex: 'Masculino', },
     { type: 'fish', image: 'acara.jpg', name: 'Acará Bandeira', color: 'Preto', sex: 'Masculino', }
-]
+];
 
 export const pet = {
+    // pegar todos os pets
     getAll: (): Type.Pet[] => {
         return data;
+    },
+    // filtrar os pets pelo tipo
+    getFromType: (type: Type.PetType): Type.Pet[] => {
+        return data.filter(item => item.type === type);
+    },
+    // filtrar os pets pelo nome
+    getFromName: (name: string): Type.Pet[] => {
+        return data.filter(item => item.name.toLowerCase().indexOf(name.toLowerCase()) > -1 ? true : false);
     }
-}
-
-// pegar todos os pets
-// filtrar os pets pelo tipo
-// filtrar os pets pelo nome
+};
